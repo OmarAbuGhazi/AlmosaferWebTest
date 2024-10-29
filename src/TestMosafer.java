@@ -19,8 +19,7 @@ public class TestMosafer {
 	public void SetUp() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get(TheWebSite);
-		WebElement LanguageBtn = driver
-				.findElement(By.cssSelector(".sc-jTzLTM.hQpNle.cta__button.cta__saudi.btn.btn-primary"));
+		WebElement LanguageBtn = driver.findElement(By.cssSelector(".sc-jTzLTM.hQpNle.cta__button.cta__saudi.btn.btn-primary"));
 		Thread.sleep(1000);
 		LanguageBtn.click();
 	}
