@@ -1,3 +1,7 @@
+import static org.testng.Assert.assertEquals;
+
+import java.time.LocalDate;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,16 +42,44 @@ public class TestMosafer {
 		String ActualCurrency = driver.findElement(By.cssSelector(".sc-dRFtgE.fPnvOO")).getText();
 		Assert.assertEquals(ActualCurrency, ExpectedCurrency);
 	}
-	@Test (priority = 3)
+
+	@Test(priority = 3)
 	public void CheckTheContactNumber() {
 		String ActualNumber = driver.findElement(By.cssSelector(".sc-hUfwpO.bWcsTG")).getText();
 		String ExpectedNumber = "+966554400000";
 		Assert.assertEquals(ActualNumber, ExpectedNumber);
 	}
-	@Test (priority = 4)
+
+	@Test(priority = 4)
 	public void CheckTheLogo() {
 		boolean ActualLogo = driver.findElement(By.cssSelector(".sc-bdVaJa.bxRSiR.sc-ciodno.lkfeIG")).isDisplayed();
 		boolean ExpectedLogo = true;
 		Assert.assertEquals(ActualLogo, ExpectedLogo);
+	}
+
+
+	@Test (priority = 5)
+	public void TestHotelSearchTab() {
+		WebElement HotelBtn = driver.findElement(By.id("uncontrolled-tab-example-tab-hotels"));
+		String ActualHotelTab = HotelBtn.getAttribute("aria-selected");
+		String ExpectedHotelTab = "false";
+		Assert.assertEquals(ActualHotelTab, ExpectedHotelTab);
+	}
+	@Test (priority = 6)
+	public void TestDepartureTime() {
+//		LocalDate today = LocalDate.now();
+		int Today = LocalDate.now().getDayOfMonth();
+		int Tomorrow = LocalDate.now().plusDays(1).getDayOfMonth();		
+		String ActualDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-lnrBVv gKbptE'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		String ExpectedDate = Integer.toString(Tomorrow);
+		Assert.assertEquals(ActualDate, ExpectedDate);
+	}   
+	@Test (priority = 7)
+	public void TestReturnDate() {
+		int Today = LocalDate.now().getDayOfMonth();
+		int AfterTomorrow = LocalDate.now().plusDays(2).getDayOfMonth();
+		String ActualReturnDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']")).getText();
+		String ExpectedReturnDate = Integer.toString(AfterTomorrow);
+		Assert.assertEquals(ActualReturnDate, ExpectedReturnDate);
 	}
 }

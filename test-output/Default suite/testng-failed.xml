@@ -5,8 +5,8 @@
     <classes>
       <class name="TestMosafer">
         <methods>
+          <include name="TestDepartureTime"/>
           <include name="SetUp"/>
-          <include name="CheckTheCurrency"/>
         </methods>
       </class> <!-- TestMosafer -->
     </classes>

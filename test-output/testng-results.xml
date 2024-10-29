@@ -1,32 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-28T19:25:01 GMT+03:00" name="Default suite" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="4709">
+  <suite started-at="2024-10-29T18:15:29 GMT+03:00" name="Default suite" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="4405">
     <groups>
     </groups>
-    <test started-at="2024-10-28T19:25:01 GMT+03:00" name="Default test" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="4709">
+    <test started-at="2024-10-29T18:15:29 GMT+03:00" name="Default test" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="4405">
       <class name="TestMosafer">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:TestMosafer@40dff0b7]" started-at="2024-10-28T19:25:01 GMT+03:00" name="SetUp" finished-at="2024-10-28T19:25:04 GMT+03:00" duration-ms="3858" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:29 GMT+03:00" name="SetUp" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="3769" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="EnglishLanguage()[pri:1, instance:TestMosafer@40dff0b7]" started-at="2024-10-28T19:25:05 GMT+03:00" name="EnglishLanguage" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="39" status="PASS">
+        <test-method signature="EnglishLanguage()[pri:1, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="EnglishLanguage" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="34" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnglishLanguage -->
-        <test-method signature="CheckTheCurrency()[pri:2, instance:TestMosafer@40dff0b7]" started-at="2024-10-28T19:25:05 GMT+03:00" name="CheckTheCurrency" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="38" status="PASS">
+        <test-method signature="CheckTheCurrency()[pri:2, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="CheckTheCurrency" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="33" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheCurrency -->
-        <test-method signature="CheckTheContactNumber()[pri:3, instance:TestMosafer@40dff0b7]" started-at="2024-10-28T19:25:05 GMT+03:00" name="CheckTheContactNumber" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="634" status="PASS">
+        <test-method signature="CheckTheContactNumber()[pri:3, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="CheckTheContactNumber" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="107" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheContactNumber -->
-        <test-method signature="CheckTheLogo()[pri:4, instance:TestMosafer@40dff0b7]" started-at="2024-10-28T19:25:05 GMT+03:00" name="CheckTheLogo" finished-at="2024-10-28T19:25:05 GMT+03:00" duration-ms="94" status="PASS">
+        <test-method signature="CheckTheLogo()[pri:4, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="CheckTheLogo" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheLogo -->
+        <test-method signature="TestHotelSearchTab()[pri:5, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="TestHotelSearchTab" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestHotelSearchTab -->
+        <test-method signature="TestDepartureTime()[pri:6, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="TestDepartureTime" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestDepartureTime -->
+        <test-method signature="TestReturnDate()[pri:7, instance:TestMosafer@2d36e77e]" started-at="2024-10-29T18:15:33 GMT+03:00" name="TestReturnDate" finished-at="2024-10-29T18:15:33 GMT+03:00" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestReturnDate -->
       </class> <!-- TestMosafer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
