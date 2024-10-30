@@ -5,7 +5,7 @@
     <classes>
       <class name="TestMosafer">
         <methods>
-          <include name="TestDepartureTime"/>
+          <include name="TestReturnDate"/>
           <include name="SetUp"/>
         </methods>
       </class> <!-- TestMosafer -->
