@@ -1,52 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-10-30T18:16:43 GMT+03:00" name="Default suite" finished-at="2024-10-30T18:17:26 GMT+03:00" duration-ms="43708">
+  <suite started-at="2024-11-17T22:01:30 GMT+03:00" name="Default suite" finished-at="2024-11-17T22:02:18 GMT+03:00" duration-ms="48275">
     <groups>
     </groups>
-    <test started-at="2024-10-30T18:16:43 GMT+03:00" name="Default test" finished-at="2024-10-30T18:17:26 GMT+03:00" duration-ms="43708">
+    <test started-at="2024-11-17T22:01:30 GMT+03:00" name="Default test" finished-at="2024-11-17T22:02:18 GMT+03:00" duration-ms="48275">
       <class name="TestMosafer">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:43 GMT+03:00" name="SetUp" finished-at="2024-10-30T18:16:45 GMT+03:00" duration-ms="2658" status="PASS">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:30 GMT+03:00" name="SetUp" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="2602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method signature="EnglishLanguage()[pri:1, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:45 GMT+03:00" name="EnglishLanguage" finished-at="2024-10-30T18:16:45 GMT+03:00" duration-ms="24" status="PASS">
+        <test-method signature="EnglishLanguage()[pri:1, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="EnglishLanguage" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EnglishLanguage -->
-        <test-method signature="CheckTheCurrency()[pri:2, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:45 GMT+03:00" name="CheckTheCurrency" finished-at="2024-10-30T18:16:45 GMT+03:00" duration-ms="20" status="PASS">
+        <test-method signature="CheckTheCurrency()[pri:2, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="CheckTheCurrency" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="23" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheCurrency -->
-        <test-method signature="CheckTheContactNumber()[pri:3, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:45 GMT+03:00" name="CheckTheContactNumber" finished-at="2024-10-30T18:16:45 GMT+03:00" duration-ms="18" status="PASS">
+        <test-method signature="CheckTheContactNumber()[pri:3, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="CheckTheContactNumber" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheContactNumber -->
-        <test-method signature="CheckTheLogo()[pri:4, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:45 GMT+03:00" name="CheckTheLogo" finished-at="2024-10-30T18:16:45 GMT+03:00" duration-ms="22" status="PASS">
+        <test-method signature="CheckTheLogo()[pri:4, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="CheckTheLogo" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckTheLogo -->
-        <test-method signature="TestHotelSearchTab()[pri:5, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:45 GMT+03:00" name="TestHotelSearchTab" finished-at="2024-10-30T18:16:46 GMT+03:00" duration-ms="181" status="PASS">
+        <test-method signature="TestHotelSearchTab()[pri:5, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="TestHotelSearchTab" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestHotelSearchTab -->
-        <test-method signature="TestDepartureTime()[pri:6, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:46 GMT+03:00" name="TestDepartureTime" finished-at="2024-10-30T18:16:46 GMT+03:00" duration-ms="34" status="PASS">
+        <test-method signature="TestDepartureTime()[pri:6, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="TestDepartureTime" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="20" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestDepartureTime -->
-        <test-method signature="TestReturnDate()[pri:7, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:46 GMT+03:00" name="TestReturnDate" finished-at="2024-10-30T18:16:46 GMT+03:00" duration-ms="15" status="PASS">
+        <test-method signature="TestReturnDate()[pri:7, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="TestReturnDate" finished-at="2024-11-17T22:01:33 GMT+03:00" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestReturnDate -->
-        <test-method signature="RandomChecksForLanguageAndInputs()[pri:8, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:46 GMT+03:00" name="RandomChecksForLanguageAndInputs" finished-at="2024-10-30T18:16:56 GMT+03:00" duration-ms="10666" status="PASS">
+        <test-method signature="RandomChecksForLanguageAndInputs()[pri:8, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:33 GMT+03:00" name="RandomChecksForLanguageAndInputs" finished-at="2024-11-17T22:01:43 GMT+03:00" duration-ms="10424" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RandomChecksForLanguageAndInputs -->
-        <test-method signature="SearchResultPage()[pri:9, instance:TestMosafer@3b0c9195]" started-at="2024-10-30T18:16:56 GMT+03:00" name="SearchResultPage" finished-at="2024-10-30T18:17:26 GMT+03:00" duration-ms="30042" status="PASS">
+        <test-method signature="SearchResultPage()[pri:9, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:01:43 GMT+03:00" name="SearchResultPage" finished-at="2024-11-17T22:02:13 GMT+03:00" duration-ms="30027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SearchResultPage -->
+        <test-method signature="SortingOptions()[pri:10, instance:TestMosafer@366c4480]" started-at="2024-11-17T22:02:13 GMT+03:00" name="SortingOptions" finished-at="2024-11-17T22:02:18 GMT+03:00" duration-ms="4886" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SortingOptions -->
       </class> <!-- TestMosafer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

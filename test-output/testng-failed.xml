@@ -5,7 +5,8 @@
     <classes>
       <class name="TestMosafer">
         <methods>
-          <include name="TestReturnDate"/>
+          <include name="SearchResultPage"/>
+          <include name="SortingOptions"/>
           <include name="SetUp"/>
         </methods>
       </class> <!-- TestMosafer -->

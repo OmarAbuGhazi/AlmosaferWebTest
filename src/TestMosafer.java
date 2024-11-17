@@ -1,6 +1,7 @@
 import static org.testng.Assert.assertEquals;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Random;
 
 import org.openqa.selenium.By;
@@ -21,7 +22,8 @@ public class TestMosafer {
 	public void SetUp() throws InterruptedException {
 		driver.manage().window().maximize();
 		driver.get(TheWebSite);
-		WebElement LanguageBtn = driver.findElement(By.cssSelector(".sc-jTzLTM.hQpNle.cta__button.cta__saudi.btn.btn-primary"));
+		WebElement LanguageBtn = driver
+				.findElement(By.cssSelector(".sc-jTzLTM.hQpNle.cta__button.cta__saudi.btn.btn-primary"));
 		Thread.sleep(1000);
 		LanguageBtn.click();
 	}
@@ -71,22 +73,26 @@ public class TestMosafer {
 	public void TestDepartureTime() {
 //		LocalDate today = LocalDate.now();
 //		int Today = LocalDate.now().getDayOfMonth();
-		 int Tomorrow = LocalDate.now().plusDays(1).getDayOfMonth();
-		    String ActualDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-lnrBVv gKbptE'] span[class='sc-fvLVrH hNjEjT']")).getText();
-		    // Convert ActualDate to an integer to remove leading zeros
-		    ActualDate = String.valueOf(Integer.parseInt(ActualDate));
-		    String ExpectedDate = String.valueOf(Tomorrow);
-		    Assert.assertEquals(ActualDate, ExpectedDate);
+		int Tomorrow = LocalDate.now().plusDays(1).getDayOfMonth();
+		String ActualDate = driver
+				.findElement(By.cssSelector("div[class='sc-OxbzP sc-lnrBVv gKbptE'] span[class='sc-fvLVrH hNjEjT']"))
+				.getText();
+		// Convert ActualDate to an integer to remove leading zeros
+		ActualDate = String.valueOf(Integer.parseInt(ActualDate));
+		String ExpectedDate = String.valueOf(Tomorrow);
+		Assert.assertEquals(ActualDate, ExpectedDate);
 	}
 
 	@Test(priority = 7)
 	public void TestReturnDate() {
-		    int AfterTomorrow = LocalDate.now().plusDays(2).getDayOfMonth();
-		    String ActualReturnDate = driver.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']")).getText();
-		    // Convert ActualReturnDate to an integer to remove leading zeros
-		    ActualReturnDate = String.valueOf(Integer.parseInt(ActualReturnDate));
-		    String ExpectedReturnDate = String.valueOf(AfterTomorrow);
-		    Assert.assertEquals(ActualReturnDate, ExpectedReturnDate);
+		int AfterTomorrow = LocalDate.now().plusDays(2).getDayOfMonth();
+		String ActualReturnDate = driver
+				.findElement(By.cssSelector("div[class='sc-OxbzP sc-bYnzgO bojUIa'] span[class='sc-fvLVrH hNjEjT']"))
+				.getText();
+		// Convert ActualReturnDate to an integer to remove leading zeros
+		ActualReturnDate = String.valueOf(Integer.parseInt(ActualReturnDate));
+		String ExpectedReturnDate = String.valueOf(AfterTomorrow);
+		Assert.assertEquals(ActualReturnDate, ExpectedReturnDate);
 	}
 
 	@Test(priority = 8)
@@ -130,6 +136,7 @@ public class TestMosafer {
 		WebElement SearchBtn = driver.findElement(By.xpath("//button[@data-testid='HotelSearchBox__SearchButton']"));
 		SearchBtn.click();
 	}
+
 	@Test(priority = 9)
 	public void SearchResultPage() throws InterruptedException {
 		Thread.sleep(30000);
@@ -139,4 +146,35 @@ public class TestMosafer {
 		Assert.assertEquals(ActualResult, ExpectedResult);
 	}
 
+	@Test(priority = 10)
+	public void SortingOptions() throws InterruptedException {
+		WebElement LowestBtn = driver.findElement(By.xpath("//div[@data-testid='srp_sort_LOWEST_PRICE']"));
+		LowestBtn.click();
+		Thread.sleep(2000);
+		if (driver.getCurrentUrl().contains("en")) {
+			Thread.sleep(2000);
+			WebElement EnContainer = driver
+					.findElement(By.cssSelector(".__ds__comp.undefined.MuiBox-root.muiltr-1smo8f0"));
+			List<WebElement> Prices = EnContainer.findElements(By.cssSelector(
+					".MuiTypography-root.MuiTypography-heading3SemBld.__ds__comp.undefined.muiltr-18vmb2l"));
+			int LowestPrice = Integer.parseInt(Prices.getFirst().getText().replace("SAR ", ""));
+			int HighestPrice = Integer.parseInt(Prices.getLast().getText().replace("SAR ", ""));
+			System.out.println(LowestPrice);
+			System.out.println(HighestPrice);
+			boolean ActualValue = LowestPrice < HighestPrice;
+			boolean ExpectedValue = true;
+			Assert.assertEquals(ActualValue, ExpectedValue);
+		} else {
+			WebElement ArContainer = driver.findElement(By.xpath("//*[@id=\"__next\"]/div[2]/div[5]/div/div[2]"));
+			List<WebElement> Prices = ArContainer.findElements(By.cssSelector(
+					".MuiTypography-root.MuiTypography-heading3SemBld.__ds__comp.undefined.muirtl-1l5b3qq"));
+			int LowestPrice = Integer.parseInt(Prices.getFirst().getText().replace("ر.س. ", ""));
+			int HighestPrice = Integer.parseInt(Prices.getLast().getText().replace("ر.س. ", ""));
+			System.out.println(LowestPrice);
+			System.out.println(HighestPrice);
+			boolean ActualValue = LowestPrice < HighestPrice;
+			boolean ExpectedValue = true;
+			Assert.assertEquals(ActualValue, ExpectedValue);
+		}
+	}
 }
