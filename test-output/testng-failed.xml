@@ -6,6 +6,7 @@
       <class name="TestMosafer">
         <methods>
           <include name="SearchResultPage"/>
+          <include name="RandomChecksForLanguageAndInputs"/>
           <include name="SortingOptions"/>
           <include name="SetUp"/>
         </methods>
